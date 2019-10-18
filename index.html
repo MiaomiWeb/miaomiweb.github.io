@@ -1,476 +1,135 @@
-<!DOCTYPE html>
-<html lang="cn">
-  <head>
-    <meta charset="utf-8">
+<!doctype html>
+<html lang="en">
+<head>
     <title>Miaomi Technology Co., Ltd.</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Miaomi Technology Co., Ltd.">
-    <meta name="author" content="">
-
-    <!-- Le styles -->
-    <link href="css/bootstrap.css" rel="stylesheet">
-    <link href="css/bootstrap-responsive.css" rel="stylesheet">
-    <style>
-
-    /* GLOBAL STYLES
-    -------------------------------------------------- */
-    /* Padding below the footer and lighter body text */
-
-    body {
-      padding-bottom: 40px;
-      color: #5a5a5a;
-    }
-
-
-
-    /* CUSTOMIZE THE NAVBAR
-    -------------------------------------------------- */
-
-    /* Special class on .container surrounding .navbar, used for positioning it into place. */
-    .navbar-wrapper {
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      z-index: 10;
-      margin-top: 20px;
-      margin-bottom: -90px; /* Negative margin to pull up carousel. 90px is roughly margins and height of navbar. */
-    }
-    .navbar-wrapper .navbar {
-
-    }
-
-    /* Remove border and change up box shadow for more contrast */
-    .navbar .navbar-inner {
-      border: 0;
-      -webkit-box-shadow: 0 2px 10px rgba(0,0,0,.25);
-         -moz-box-shadow: 0 2px 10px rgba(0,0,0,.25);
-              box-shadow: 0 2px 10px rgba(0,0,0,.25);
-    }
-
-    /* Downsize the brand/project name a bit */
-    .navbar .brand {
-      padding: 14px 20px 16px; /* Increase vertical padding to match navbar links */
-      font-size: 16px;
-      font-weight: bold;
-      text-shadow: 0 -1px 0 rgba(0,0,0,.5);
-    }
-
-    /* Navbar links: increase padding for taller navbar */
-    .navbar .nav > li > a {
-      padding: 15px 20px;
-    }
-
-    /* Offset the responsive button for proper vertical alignment */
-    .navbar .btn-navbar {
-      margin-top: 10px;
-    }
-
-
-
-    /* CUSTOMIZE THE CAROUSEL
-    -------------------------------------------------- */
-
-    /* Carousel base class */
-    .carousel {
-      margin-bottom: 60px;
-    }
-
-    .carousel .container {
-      position: relative;
-      z-index: 9;
-    }
-
-    .carousel-control {
-      height: 80px;
-      margin-top: 0;
-      font-size: 120px;
-      text-shadow: 0 1px 1px rgba(0,0,0,.4);
-      background-color: transparent;
-      border: 0;
-      z-index: 10;
-    }
-
-    .carousel .item {
-      height: 500px;
-    }
-    .carousel img {
-      position: absolute;
-      top: 0;
-      left: 0;
-      min-width: 100%;
-      height: 500px;
-    }
-
-    .carousel-caption {
-      background-color: transparent;
-      position: static;
-      max-width: 550px;
-      padding: 0 20px;
-      margin-top: 200px;
-    }
-    .carousel-caption h1,
-    .carousel-caption .lead {
-      margin: 0;
-      line-height: 1.25;
-      color: #fff;
-      text-shadow: 0 1px 1px rgba(0,0,0,.4);
-    }
-    .carousel-caption .btn {
-      margin-top: 10px;
-    }
-
-
-
-    /* MARKETING CONTENT
-    -------------------------------------------------- */
-
-    /* Center align the text within the three columns below the carousel */
-    .marketing .span4 {
-      text-align: center;
-    }
-    .marketing h2 {
-      font-weight: normal;
-    }
-    .marketing .span4 p {
-      margin-left: 10px;
-      margin-right: 10px;
-    }
-
-
-    /* Featurettes
-    ------------------------- */
-
-    .featurette-divider {
-      margin: 80px 0; /* Space out the Bootstrap <hr> more */
-    }
-    .featurette {
-      padding-top: 120px; /* Vertically center images part 1: add padding above and below text. */
-      overflow: hidden; /* Vertically center images part 2: clear their floats. */
-    }
-    .featurette-image {
-      margin-top: -120px; /* Vertically center images part 3: negative margin up the image the same amount of the padding to center it. */
-    }
-
-    /* Give some space on the sides of the floated elements so text doesn't run right into it. */
-    .featurette-image.pull-left {
-      margin-right: 40px;
-    }
-    .featurette-image.pull-right {
-      margin-left: 40px;
-    }
-
-    /* Thin out the marketing headings */
-    .featurette-heading {
-      font-size: 50px;
-      font-weight: 300;
-      line-height: 1;
-      letter-spacing: -1px;
-    }
-
-
-
-    /* RESPONSIVE CSS
-    -------------------------------------------------- */
-
-    @media (max-width: 979px) {
-
-      .container.navbar-wrapper {
-        margin-bottom: 0;
-        width: auto;
-      }
-      .navbar-inner {
-        border-radius: 0;
-        margin: -20px 0;
-      }
-
-      .carousel .item {
-        height: 500px;
-      }
-      .carousel img {
-        width: auto;
-        height: 500px;
-      }
-
-      .featurette {
-        height: auto;
-        padding: 0;
-      }
-      .featurette-image.pull-left,
-      .featurette-image.pull-right {
-        display: block;
-        float: none;
-        max-width: 40%;
-        margin: 0 auto 20px;
-      }
-    }
-
-
-    @media (max-width: 767px) {
-
-      .navbar-inner {
-        margin: -20px;
-      }
-
-      .carousel {
-        margin-left: -20px;
-        margin-right: -20px;
-      }
-      .carousel .container {
-
-      }
-      .carousel .item {
-        height: 300px;
-      }
-      .carousel img {
-        height: 300px;
-      }
-      .carousel-caption {
-        width: 65%;
-        padding: 0 70px;
-        margin-top: 100px;
-      }
-      .carousel-caption h1 {
-        font-size: 30px;
-      }
-      .carousel-caption .lead,
-      .carousel-caption .btn {
-        font-size: 18px;
-      }
-
-      .marketing .span4 + .span4 {
-        margin-top: 40px;
-      }
-
-      .featurette-heading {
-        font-size: 30px;
-      }
-      .featurette .lead {
-        font-size: 18px;
-        line-height: 1.5;
-      }
-
-    }
-    </style>
-
-    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
-    <!--[if lt IE 9]>
-      <script src="../assets/js/html5shiv.js"></script>
-    <![endif]-->
-
-    <!-- Fav and touch icons -->
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="ico/apple-touch-icon-144-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="ico/apple-touch-icon-114-precomposed.png">
-      <link rel="apple-touch-icon-precomposed" sizes="72x72" href="ico/apple-touch-icon-72-precomposed.png">
-                    <link rel="apple-touch-icon-precomposed" href="ico/apple-touch-icon-57-precomposed.png">
-                                   <link rel="shortcut icon" href="ico/favicon.png">
-  </head>
-
-  <body>
-
-
-
-    <!-- NAVBAR
-    ================================================== -->
-    <div class="navbar-wrapper " >
-     
-      <div class="container">
-
-        <div class="navbar navbar-inverse span3" >
-          <div class="navbar-inner">
-            <!-- Responsive Navbar Part 1: Button for triggering responsive navbar (not covered in tutorial). Include responsive CSS to utilize. -->
-            <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-            <div class="brand" style="padding-right:0; color:#FFF;">Miaomi Technology Co., Ltd.</div>
-           <!-- <div class="nav-collapse collapse">
-              <ul class="nav">
-                <li class="active"><a href="#">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li class="dropdown">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
-                  <ul class="dropdown-menu">
-                    <li><a href="#">Action</a></li>
-                    <li><a href="#">Another action</a></li>
-                    <li><a href="#">Something else here</a></li>
-                    <li class="divider"></li>
-                    <li class="nav-header">Nav header</li>
-                    <li><a href="#">Separated link</a></li>
-                    <li><a href="#">One more separated link</a></li>
-                  </ul>
-                </li>
-              </ul>
-            </div>--><!--/.nav-collapse -->
-          </div><!-- /.navbar-inner -->
-        </div><!-- /.navbar -->
-
-      </div> <!-- /.container -->
-    </div><!-- /.navbar-wrapper -->
-
-
-
-    <!-- Carousel
-    ================================================== -->
-    <div id="myCarousel" class="carousel slide">
-      <div class="carousel-inner">
-        <div class="item active">
-          <img src="img/slide-01.jpg" alt="">
-          <div class="container">
-            <div class="carousel-caption">
-              <h1>我们的工作</h1>
-              <p class="lead">不论阁下是想提升管理效率，还是需要创新产品的设计与研发，只需找到我们，就可以帮助阁下达成所愿，并成为您生活与事业强有力的支撑者。</p>
-            <!-- <a class="btn btn-large btn-primary" href="#">看看环境！</a>-->
-            </div>
-          </div>
-        </div>
-        <div class="item">
-          <img src="img/slide-02.jpg" alt="">
-          <div class="container">
-            <div class="carousel-caption">
-              <h1>我们的产品</h1>
-              <p class="lead">不论是个人用户，还是企业用户，都可以在我们的产品中找到属于自己的惊喜。只要你敢相信我们，飞碟我们都敢造，重点是不仅敢造，还能造成。</p>
-              <!--<a class="btn btn-large btn-primary" href="#">别招惹我！</a>-->
-            </div>
-          </div>
-        </div>
-        <div class="item">
-          <img src="img/slide-03.jpg" alt="">
-          <div class="container">
-            <div class="carousel-caption">
-              <h1>我们的团队</h1>
-              <p class="lead">我们不是天才。但我们有强大的自我约束力与执行力，卓越的创造力只是我们的基本素养。如果你认为你和我们是同类，那么欢迎你加入。</p>
-              <!--<a class="btn btn-large btn-primary" href="#">踊跃报名！</a>-->
-            </div>
-          </div>
-        </div>
-      </div>
-      <a class="left carousel-control" href="#myCarousel" data-slide="prev">&lsaquo;</a>
-      <a class="right carousel-control" href="#myCarousel" data-slide="next">&rsaquo;</a>
-    </div><!-- /.carousel -->
-
-
-
-    <!-- Marketing messaging and featurettes
-    ================================================== -->
-    <!-- Wrap the rest of the page in another container to center all the content. -->
-
-    <div class="container marketing" id="top">
-
-      <!-- Three columns of text below the carousel -->
-      <div class="row">
-        <div class="span4">
-          <img class="img-circle" src="img/software.png">
-          <h2>Software</h2>
-          <p>产品智慧的塑造者———如果你没有10年以上的开发经验，如果你不会折腾数量5种以上的操作系统，如果你没老婆或者有很多老婆……好吧，你不是我们要的天才。这里是决定产品“智商”的地方，产品工作能力的培养可不能让交给一个毛手毛脚的家伙当成小白鼠来折磨。</p>
-          <p><a class="btn" id="goto" href="#software">瞄一眼 &raquo;</a></p>
-        </div><!-- /.span4 -->
-        <div class="span4">
-          <img class="img-circle" src="img/lifeware.png">
-          <h2>Lifeware</h2>
-          <p>产品灵魂的赋予者———你有躺在浴缸里听着音乐喝红酒吗？你能在三天内完全操控一款全新的软件或者硬件吗？你有幻想过被雷劈吗？不是？你显然不具备鬼斧神工的能力。产品的创意、性格、情商全部源自于此。在产品的孕育之地，决不能容忍搞一庸脂俗粉出来。</p>
-          <p><a class="btn" id="goto" href="#lifeware">窥一下 &raquo;</a></p>
-        </div><!-- /.span4 -->
-        <div class="span4">
-          <img class="img-circle" src="img/hardware.png">
-          <h2>Hardware</h2>
-          <p>产品体质的铸造者————15秒内你就能回答出一款硬件材料的来源与生产成本。15天之内你就能自行制作出一个智能机器人的粗旷原型！什么，你办不到？好吧，我们的产品要像诺基亚一样强壮，苹果一样美丽。如果你找个黄瓜来做哪吒，那么请回吧。</p>
-          <p><a class="btn" id="goto" href="#hardware">瞧一眼 &raquo;</a></p>
-        </div><!-- /.span4 -->
-      </div><!-- /.row -->
-
-
-      <!-- START THE FEATURETTES -->
-
-      <hr class="featurette-divider">
-
-      <div class="featurette" id="software">
-        <img class="featurette-image pull-right" src="img/icon-software.png">
-        <h2 class="featurette-heading">智慧软件 <span class="muted">Wisdom</span></h2>
-        <p class="lead" style="text-align:justify;">软件世界无奇不有，反人类操控层出不穷！极简主义是我们一切软件设计的核心思想。别拿行业经验说事，行业经验本身就有很多是反人类的（这里包含365行）。所以我们设计产品时，你可以建议，但别提要求。因为我们做的是产品，不做项目。别指望我们给你一份软件说明书。有了说明书你一样需要培训。更何况我们软件的Readme只有你付费后才能给你。这是原则！如果你接受这样的原则，好吧，欢迎选用miaomi的软件，并接受我们最真诚优质的服务。</p>
-      </div>
-	  <p class="pull-right"><a id="gototop" href="#top">Back to top</a></p>
-      <hr class="featurette-divider">
-
-      <div class="featurette" id="hardware">
-        <img class="featurette-image pull-left" src="img/icon-hardware.png">
-        <h2 class="featurette-heading">激情硬件 <span class="muted">Passions</span></h2>
-        <p class="lead" style="text-align:justify;">硬件的世界里有太多的吐槽设计，偶尔花点小心思，也是金玉其表、败絮其中，好不容易有个苹果，如今也是江郎才尽，设计日下。硬件的设计难不成就不允许有点真正的激情？当然不是，看看那些顶级轿车吧，同样是工业化产品，激情设计层出不穷。说到底是你愿不愿样花心思，花精力去做。miaomi永远会把每一份硬件设计都当做自己的情人来打扮，让它用尽善尽美的视觉与触觉，激发你内心的激情欲望。带给你最美妙的生活感觉。所以如果阁下想拥有一个智能的家，请准备好¥50万后随时与我们联系。</p>
-      </div>
-	  <p class="pull-right"><a id="gototop" href="#top">Back to top</a></p>
-      <hr class="featurette-divider">
-
-      <div class="featurette" id="lifeware">
-        <img class="featurette-image pull-right" src="img/icon-lifeware.png">
-        <h2 class="featurette-heading">享受生活 <span class="muted">Enjoyments</span></h2>
-        <p class="lead" style="text-align:justify;">miaomi用心打造的每一份产品都遵从“让世界更简单”的原则。我们的每一份灵感、每一份设计都来源于解决您生活、工作中的不如意。感谢您将您的苦恼告诉我们。我们虽不能解决所有的问题，但凡是我们能解决的，我们都将竭尽全力。让全世界都能尽情的享受生活，这就是我们的目的！</p>
-      </div>
-      <p class="pull-right"><a id="gototop" href="#top">Back to top</a></p>
-      <hr class="featurette-divider">
-
-      <!-- /END THE FEATURETTES -->
-
-
-      <!-- FOOTER -->
-      <footer>
-        <!--<p class="pull-right"><a id="gototop" href="#top">Back to top</a></p>-->
-        <p> &middot;&copy; 2014 Miaomi Technology Co., Ltd. &middot; </p>
-      </footer>
-
-    </div><!-- /.container -->
-
-
-
-    <!-- Le javascript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="js/jquery.js"></script>
-    <script src="js/bootstrap-transition.js"></script>
-    <script src="js/bootstrap-alert.js"></script>
-    <script src="js/bootstrap-modal.js"></script>
-    <script src="js/bootstrap-dropdown.js"></script>
-    <script src="js/bootstrap-scrollspy.js"></script>
-    <script src="js/bootstrap-tab.js"></script>
-    <script src="js/bootstrap-tooltip.js"></script>
-    <script src="js/bootstrap-popover.js"></script>
-    <script src="js/bootstrap-button.js"></script>
-    <script src="js/bootstrap-collapse.js"></script>
-    <script src="js/bootstrap-carousel.js"></script>
-    <script src="js/bootstrap-typeahead.js"></script>
-    <script>
-      !function ($) {
-        $(function(){
-          // carousel demo
-          $('#myCarousel').carousel()
-        })
-      }(window.jQuery)
-    </script>
-    <script src="js/holder/holder.js"></script>
-    <script src="js/mootools-1.2.4-core-yc.js" type="text/javascript"></script>
-	<script src="js/mootools-1.2.4.4-more.js" type="text/javascript"></script>
-
-<script>
+    <meta charset="utf-8"/>
+    <meta name="author" content="snazzysheet" />
+    <meta name="description" content="Modern Bootstrap 4 Admin Template - Fully Responsive" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <link rel="icon" href="assets/img/favicon.png"/>
+    <link rel="stylesheet" href="assets/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="assets/icon/material-icons-2.2.0/material-icons.css"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:300|Open+Sans|Raleway"/>
+    <link rel="stylesheet" href="assets/css/style.css"/>
+</head>
+
+<body>
+<!-- LOADER -->
+<div id="load">
+    <div class="load-container">
+        <img class="mb-3" src="assets/img/dark.png" /><img>
+        <h6 class="font-julius-sans-one mb-4">123</h6>
+        <div class="load-bard"></div>
+        <div class="load-bard"></div>
+        <div class="load-bard"></div>
+    </div>
+</div>
+<!-- HEADER -->
+<header class="header">
     
-		window.addEvent('domready',function() {
-			 new SmoothScroll({duration:700});
-			 /* go to top */
-			 var go = $('goto');
-			 go.set('opacity','0').setStyle('display','block');
-		 window.addEvent('scroll',function(e) {
-				 if(Browser.Engine.trident4) {
-					 go.setStyles({
-						 'position': 'absolute',
-						 'bottom': window.getPosition().y + 10,
-						 'width': 100
-					 });
-				 }
-				 go.fade((window.getScroll().y > 300) ? 'in' : 'out')
-			 });
-		 }); 
+    <img src="assets/img/dark.png" class="brand" />
+  
+    <nav class="nav nav-header">
+            <a class="nav-link active" href="#home">HOME</a>
+    <a class="nav-link" href="#demo">PRODUCT</a>
+    <a class="nav-link" href="#features">FEATURES</a>
+    </nav>
+</header>
 
+    <!-- COVER -->
+    <div id="home" class="container-fluid cover">
+        <div class="cover-content text-white">
+            <h1 class="mb-3"><img src="assets/img/icon-light.png" class="mr-3"/></h1>
+            <h1 class="mb-3">Better Life Building</h1>
+            <p class="lead mb-5">Miaomi Technology Co., Ltd.</p>
+            <p class="lead mb-0">
+                <a href="#demo" class="btn btn-white-outline scrolling">Our Productor</a>
+            </p>
+        </div>
+    </div>
+    <!-- DEMOS -->
+    <div id="demo" class="container-fluid bg-white texture-brushed-alum">
+        <div class="row">
+            <div class="col-12">
+                <h2 class="mb-3">PRODUCT</h2>
+                <p class="lead mb-5">Default Theme is Light but you aslo have the choice to costumase it as you like, there is en exmeple of dark theme page</p>
+            </div>
+            <div class="col-sm pr-sm-0">
+                <div class="card bg-dark text-white texture-low-contrast-line">
+                    <div class="card-body text-center">
+                        <h2 class="mb-4">AlvaIM</h2>
+                        <div class="card mx-sm-3">
+                            <img src="assets/img/alvaim.png" class="img-fluid">
+                        </div>
+                        <a href="https://apps.apple.com/us/app/alvaim/id1471768357?l=zh&ls=1" class="btn btn-white"><img src="assets/img/light.png"/></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-sm pl-sm-0">
+                <div class="card texture-low-contrast-line">
+                    <div class="card-body text-center">
+                        <h2 class="mb-4">iTime</h2>
+                        <div class="card mx-sm-3">
+                            <img src="assets/img/ITime.png" class="img-fluid">
+                        </div>
+                        <a href="https://apps.apple.com/us/app/itime-mobile/id1190936220?l=zh&ls=1" class="btn btn-dark"><img src="assets/img/dark.png"/></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- FEATURRES -->
+    <div id="features" class="container-fluid bg-dark texture-brushed-alum-light">
+        <div class="row">
+            <div class="col-12 text-white">
+                <h2 class="mb-3">FEATURES</h2>
+                <p class="lead mb-5">These are The Main Features of Our Product</p>
+            </div>
+            <div class="col-sm">
+                <div class="card card-justify">
+                    <div class="card-body text-center">
+                        <i class="icon-lg material-icons">vpn_lock</i>
+                        <h6 class="font-weight-bold">Encrypt</h6>
+                        <p class="mb-0">Blockchain digital encryption.</p>
+                    </div>
+                </div>
+            </div>
+             <div class="col-sm">
+                <div class="card card-justify">
+                    <div class="card-body text-center">
+                        <i class="icon-lg material-icons">delete_sweep</i>
+                        <h6 class="font-weight-bold">Destruct</h6>
+                        <p class="mb-0">Delete all information just one key.</p>
+                    </div>
+                </div>
+            </div>
+               <div class="col-sm">
+                <div class="card card-justify">
+                    <div class="card-body text-center">
+                        <i class="icon-lg material-icons">assignment_ind</i>
+                        <h6 class="font-weight-bold">Coordinate</h6>
+                        <p class="mb-0">Digital business card transaction.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+       
+        
+        
+    </div>
 
-		</script>
-  </body>
+<!-- FOOTER -->
+<footer class="footer">
+    <p class="mb-2">Copyright © 2014-2019 <span class="text-white">Miaomi Technology Co., Ltd.</span> All Rights Reserved. </p>
+    
+</footer>
+
+<!-- SCRIPTS -->
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/dist/js/bootstrap.min.js"></script>
+<script src="assets/js/style.js"></script>
+</body>
 </html>
+
+
